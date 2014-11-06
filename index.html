@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>DungeonUp</title>
+	<meta name="description" content="A puzzle-like rogue-like dungeon crawler created by Clewcat Games." />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MFVW78"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MFVW78');</script>
+	<!-- End Google Tag Manager -->
+
+	<!--
+	<script src="js/swfobject.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		function loadFlashPlayer() {
+			var flashvars = {
+			};
+			var params = {
+				menu: "false",
+				scale: "default",
+				allowFullscreen: "true",
+				allowScriptAccess: "always",
+				bgcolor: "#000000",
+				wmode: "direct"
+			};
+			var attributes = {
+			};
+			var jo = $("#playContent");
+			swfobject.embedSWF(
+				"DungeonUp.bin?id=com.clewcat.DungeonUp&version=0.9.0",
+				"flashContent", jo.width(), jo.height(), "11.3.0", 
+				"expressInstall.swf", 
+				flashvars, params, attributes);
+			
+			$("#playContent, #navPlay").unbind("click");
+		}
+		
+		$(document).ready(function() {
+			$("#playContent, #navPlay").click(loadFlashPlayer);
+			$("#navSubscribe").click(function() {
+				$("#subscribeEmail").focus();
+			});
+			$("#navBuy").click(function() {
+				$("#buyLink").click();
+			});
+		});
+	</script>
+	-->
+	
+	<style>
+		body {
+			background-color: #000000;
+			background: url('images/bg.png');
+			background-repeat: repeat;
+			position: relative;
+			margin: 0;
+			color: #ffe06a;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		img {
+			display: block;
+		}
+		p {
+		}
+		a:link {
+			color: #00ccff;
+			text-decoration: none;
+			border-width: 0;
+		}
+		a:visited {
+			color: #ff00cc;
+			text-decoration: none;
+			border-width: 0;
+		}
+		#menu {
+			position: fixed;
+			left: 50%;
+			top: 40%;
+			z-index: 10;
+		}
+		#menu div {
+			position: relative;
+			background: url('images/button_bg.png');
+			background-repeat: no-repeat;
+			width: 125px;
+			height: 66px;
+			padding-top: 16px;
+			text-align: center;
+			margin-left: -608px;
+		}
+		#menu a {
+			display: block;
+			font-size: 28px;
+		}
+		#menu a:link {
+			color: #ffcc00;
+		}
+		#menu a:visited {
+			color: #ffcc00;
+		}
+		div#content { 
+			position: relative;
+			width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: hidden;
+		}
+		#content div {
+			position: relative;
+			width: 720px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		div#title {
+			position: relative;
+			background: url('images/bg_top.png');
+			background-repeat: repeat;
+		}
+		img#title_img {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		div#bar {
+			position: relative;
+			background: url('images/bar.png');
+			background-repeat: repeat-x;
+			height: 89px;
+		}
+		div#barLower {
+			position: absolute;
+			background: url('images/bar_lower.png');
+			background-repeat: repeat-x;
+			width: 100%;
+			height: 23px;
+		}
+		div#wallLeft {
+			position: absolute;
+			margin-left: 0;
+			background: url('images/wall.png');
+			background-repeat: repeat-y;
+			width: 67px;
+			height: 100%;
+		}
+		div#wallRight {
+			position: absolute;
+			margin-left: 893px;
+			background: url('images/wall.png');
+			background-repeat: repeat-y;
+			width: 67px;
+			height: 100%;
+		}
+		div#description {
+			margin-top: 64px;
+			font-size: 28px;
+			width: 640px;
+		}
+		div#screenshot {
+		}
+		#screenshot img {
+			width: 720px;
+		}
+		div#features {
+		}
+		#features p {
+		}
+		#features li {
+			color: #33ff33;
+			font-size: 20px;
+		}
+		div#play {
+			margin-top: 64px;
+		}
+		div#playContent {
+			width: 720px;
+			height: 540px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #000000;
+		}
+		#flashContent {
+			height: 100%;
+		}
+		#playContent img {
+			margin: auto;
+			width: 100%;
+			height: 100%;
+		}
+		div#buyButton {
+			margin-top: 32px;
+		}
+		div#buy {
+			color: #ffcc00;
+			font-size: 20px;
+		}
+		div#subscribe {
+			margin-top: 64px;
+		}
+		#subscribe label {
+			font-size: 28px;
+		}
+		#subscribe .button {
+			background-color: #00ccff;
+			font-size: 20px;
+		}
+		#subscribe .button:hover {
+			background-color: #00ccff;
+		}
+		#additional {
+			margin-top: 64px;
+		}
+		#additional a {
+			display: block;
+			font-size: 20px;
+			margin-top: 8px;
+		}
+		footer {
+			color: #ffffff;
+			font-size: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="title">
+		<img id="title_img" src="images/title.png"/>
+	</div>
+	<div id="bar"></div>
+	<div id="barLower"></div>
+	<div id="menu">
+		<div><a id="navPlay" href="http://www.newgrounds.com/portal/view/644546" target="_blank">Play</a></div>
+		<div><a id="navBuy" href="http://sites.fastspring.com/clewcatgames/product/dungeonup" target="_blank" onclick="this.parentNode.submit(); return false;">Buy</a></div>
+		<div><a id="navSubscribe" href="#subscribe"><small>Subscribe</small></a></div>
+		<div><a href="http://press.clewcat.com" target="_blank"><small>About</small></a></div>
+	</div>
+
+	<div id="content">
+		<div id="wallLeft"><img src="images/lamp.png"/></div>
+		<div id="wallRight"><img src="images/lamp.png"/></div>
+		<div id="description">
+			<p>
+				<b>DungeonUp</b> is a dungeon crawler with mini-puzzles and procedurally generated levels. <p>You play a human knight who fights the way out of deep dungeon, by killing monsters and solving the map-based puzzles.</p>Most levels are randomly generated and you will never be bored of making choices again. This is a must have for roguelike fans. 
+			</p>
+		</div>
+		<div id="screenshot">
+			<!--
+			<img src="https://dl.dropboxusercontent.com/u/28239335/DungeonUp/DU_Gameplay_v0.7.0.gif"/>
+			-->
+			<iframe width="640" height="360" src="//www.youtube.com/embed/CTPI-UWvN7Q" frameborder="0" allowfullscreen></iframe>
+			
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="position:absolute;width:35px;left:725px;top:60px;">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_compact"></a>
+			</div>
+			<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53880b87799db93b"></script>
+			<!-- AddThis Button END -->
+		</div>
+		<div id="features">
+			<h2>
+				<b>Features:</b>
+			</h2>
+			<ul>
+				<li>50+ levels in 5 zones with different monsters and theme.</li>
+				<li>10+ levels with secrets and plots.</li>
+				<li>40+ monsters, and some are with speical abilities.</li>
+				<li>In each zone there's a boss battle, requires you to fight with wisdom.</li>
+				<li>40+ unique items, and some are designed with puzzles.</li>
+				<li>Oryx's 16-bit Fantasy Sprite Set.</li>
+				<li>3 difficulty levels, designed for both casual and hardcore players.</li>
+				<li>Maze Mode for your coffee break.</li>
+			</ul>
+		</div>
+		
+		<!--
+		<div id="play">
+			<h2>
+				<b>PLAY THE DEMO</b> (requires <a href="http://www.adobe.com/go/getflashplayer" target="_blank">Flash Player</a>)
+			</h2>
+		</div>
+		<div id="playContent">
+			<div id="flashContent">
+				<img src="images/button_play.png"/>
+			</div>
+		</div>
+		-->
+		<div id="play">
+			<h2>
+				<a href="http://www.newgrounds.com/portal/view/644546" target="_blank">
+					<b>PLAY THE DEMO on</b>
+					<img src="http://cssimg.ngfiles.com/bg-header/logo.png" />
+				</a>
+			</h2>
+		</div>
+	
+		<div id="buy">
+			<div id="buyButton">
+				<form method="POST" action="http://sites.fastspring.com/clewcatgames/product/dungeonup" target="_blank">
+					<a id="buyLink" href="http://sites.fastspring.com/clewcatgames/product/dungeonup" onclick="this.parentNode.submit(); return false;"><img src="images/button_buy.png"/></a>
+				</form>
+			</div>
+			<p><b>Buy the full version and you will get:</b></p>
+			<ul>
+				<li>Both Windows and Mac versions, auto-updating and DRM-free!</li>
+				<li>All levels unlocked!</li>
+				<li>Unlimited play times for Maze Mode!</li>
+				<li>Unlimited save slots!</li>
+				<li>All sound tracks in MP3 format!</li>
+				<li>Playing in full screen!</li>
+				<li>Your savedata synchronized with the demo.(*)</li>
+			</ul>
+			<small>* Only applys to savedata created since v0.7.6</small>
+		</div>
+		
+		<div id="subscribe">
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+			<form action="http://clewcat.us3.list-manage.com/subscribe/post?u=d202b54acbc7be1fbf81cd48c&amp;id=b0ef3c0f0d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<label for="mce-EMAIL">Subscribe DungeonUp's Newsletters</label>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;"><input id="subscribeEmail" type="text" name="b_d202b54acbc7be1fbf81cd48c_b0ef3c0f0d" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+		
+		<div>
+			<h2>
+				<b>Follow us:</b>
+			</h2>
+			<!-- AddThis Follow BEGIN -->
+			<div class="addthis_toolbox addthis_32x32_style addthis_default_style">
+			<a class="addthis_button_facebook_follow" addthis:userid="pages/DungeonUp/256755371176500"></a>
+			<a class="addthis_button_twitter_follow" addthis:userid="dungeonup"></a>
+			<a class="addthis_button_tumblr_follow" addthis:userid="clewcat"></a>
+			</div>
+			<!-- AddThis Follow END -->
+		</div>
+		
+		<div id="additional">
+			<h2>
+				<b>Additional Links:</b>
+			</h2>
+			<a href="http://www.reddit.com/r/dungeonup" target="_blank">Feedback on Reddit</a>
+			<a href="http://forums.tigsource.com/index.php?topic=39803.15" target="_blank">Dev Thread (TIGSource)</a>
+			<a href="http://indiegames.com/2014/04/browser_pick_chat_clewcats_dun.html" target="_blank">IndieGames.com Pick + Chat</a>
+			<a href="https://www.youtube.com/watch?v=KulH_2KcNkw" target="_blank">IHeartPieGaming plays the game</a>
+			<a href="https://www.youtube.com/watch?v=8_T4ern7WY8" target="_blank">Let's Play video by SpetkeFin</a>
+		</div>
+		<!--
+		-->
+	</div>
+	<footer>
+		<p><small>© 2014 <a href="http://clewcat.com" target="_blank">Clewcat Games</a>. All rights reserved.</small></p>
+	</footer>
+</body>
+</html>

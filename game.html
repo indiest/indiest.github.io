@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>DungeonUp</title>
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta name="description" content="A hybrid of roguelike and puzzler by Clewcat Games." />
+	<script src="js/swfobject.js"></script>
+	<script>
+		var flashvars = {
+		};
+		var params = {
+			menu: "false",
+			scale: "default",
+			allowFullscreen: "true",
+			allowScriptAccess: "always",
+			bgcolor: "#000000",
+			wmode: "direct"
+		};
+		var attributes = {
+		};
+		swfobject.embedSWF(
+			"DungeonUp.swf?id=com.clewcat.DungeonUp&version=0.9.1",
+			"altContent", "100%", "100%", "11.9.0", 
+			"expressInstall.swf", 
+			flashvars, params, attributes);
+	</script>
+	<style>
+		html, body { height:100%; overflow:hidden; }
+		body { margin-left:auto; margin-right:auto; text-align:center; background-color:#000000}
+	</style>
+</head>
+<body>
+	<div id="altContent">
+		<h1>DungeonUp</h1>
+		<p><a href="http://www.adobe.com/go/getflashplayer"></a></p>
+	</div>
+</body>
+</html>

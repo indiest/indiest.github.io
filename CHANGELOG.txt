@@ -1,0 +1,122 @@
+v0.7.0
+Initial public release.
+
+v0.7.1
+* Added shadow casting of walls and creatures;
+* Added a setting option which can double the speed of movement and text;
+* Disabled the usage of teleporting items in boss levels. Wont't effect save data of previous versions;
+* In Casual Mode, the key-buyer is gifted free keys as well, so he no longer wants buy any key from you :)
+* Fixed the bug that the monster tooltip blocked clicking of the monster on the map.
+
+v0.7.2
+* When you start playing Story Mode after the first time, you can skip the opening scene;
+* You can now attack monsters that have higher defence than your attack. To avoid dying, you can use "Flee";
+* Optimized login workflow;
+* Fixed bug: the game may freeze after clicking "Resurrect" in Game Over menu.
+
+v0.7.5
+* Finished all levels in Story Mode. You can still play first 30 levels in the demo version;
+* Added a new type of consumable item "Scroll of Chaos";
+* The Book of Monsters becomes smarter: it now shows special abilities/attributes of monsters;
+* Also does the Wand of Flying: the gems and blue keys can be revealed for each level;
+* Added a close button to the UI of the Book of Monsters;
+* Splitted sound & music switch button in the setting panel;
+* Monsters are now moving faster as well if you turn on "Faster Move & Text Speed";
+* Added tooltips to arms;
+* The disabled items will become darken when you enter a level; the Scrolls of Teleport are no longer disabled in boss levels;
+* Map loads much faster.
+
+v0.7.6
+* Brand-new website and main screen in game!
+* Added higher quality music;
+* First release of Windows and Mac version;
+* Fixed some text errors;
+
+v0.7.7
+* Added scoring system and scoreboards;
+* Now you can advance the tutorial (of Monster Book) by hitting SPACE key;
+* Now you can logout and play as a new guest;
+* Made the faster speed as the default setting;
+* The NPCs will no longer block the doorway;
+* Changed the prices of some Relic items;
+* Fixed some text errors;
+* Fixed bug: in Hell Mode, monsters' info could also be revealed in dark rooms;
+* Fixed bug: using The Wand of Flying might cause error in some levels;
+* Fixed bug: the music would be mute after switching back to the game;
+* Fixed bug: the music would be overlapped when going back to previous zone;
+* Fixed bug: misplaced the Mithril Armor with the Dragon Layer at Level -3; (*)
+* Fixed bug: the Master Smith might not respond after you talked to him; (*)
+
+(*) only apply to newly created games
+
+v0.7.8
+* Quick fix: the client would be halted when showing scoring panel;
+
+v0.7.9
+* Added preview of Maze Mode in download versions;
+* Now you can report bugs in game; (added the button in pause menu)
+* For Hell Difficulty, increased the minimum of Yellow Keys generated in each zone;
+* Fixed bug: in Hell Difficulty, the items would be revealed in dark room;
+* Fixed scrolling issues in the UI of Wand of Flight.
+
+v0.8.0
+* Added Zone2 and Zone3 for Maze Mode;
+* Now Maze Mode is playable in demo version!
+
+v0.8.1
+* Added Achievements;
+* Adjusted balancing of Maze Mode;
+* Now you can use Soul Stone to revive in Maze Mode;
+* In the Maze Mode, removed Magic Mattock, Scroll of Earthquke and Lucy Coin from the shop and added Scroll of Teleport and Arms;
+* Optimized the loot gold display of the monsters when the Lucky Coin is worn;
+* Fixed a bug about the secret ending;
+* Fixed bugs for unlocking Maze Mode and buying Maze Ticket;
+
+v0.8.2
+* Re-crafted most of in-game text;
+* Tweaked some UI;
+* Fixed bug: some achievements would complete improperly;
+* Fixed bug: the client program sometimes failed to save the game;
+* Fixed bug: the client program would restart endlessly when trying to update, if it did not have write access to the install directory. If it happened to you, try to run the program as an administrator;
+
+v0.8.3
+* Quick fix: the incorrect display of merchants' text;
+* The default name of each achievement will be displayed, if you have not input any value.
+
+v0.8.4
+* Released BIME(Build-in Map Editor);
+* Added new game mode: "Player Maps";
+* Fixed bug: in Hell Mode, the monsters' tips on map would not show up in some levels;
+* The campaign of collecting achievement names is closed. Thanks for your participation!
+
+v0.8.5
+* Fixed some bugs in BIME;
+* Released manual for BIME;
+
+v0.8.6
+* Quck fix: achievement-related bug that may freeze the game;
+* Fixed bug: in script editor of BIME, "addEvent" won't save properly;
+* Fixed bug: in TotS map, the bronze sword and shield won't take effect;
+
+v0.8.7
+* Now you can create more than one game in Story Mode;
+* Added the "Undo" button for undoing the action of opening a door;
+* Added the setting option which can enable/disable movement by mouse/touch;
+
+v0.8.8
+* In Story Mode, more yellow keys are generated;
+* The merchants in the Lobby of Relics have summoned the anti-magic field so The Magic Mattock and Scroll of Earthquake are no longer usable in those levels;
+* Fixed some minor bugs in the map editor;
+
+v0.8.9
+* Optimized map generating;
+* Now you can rate for player's maps; maps have higher ratings will appear at the top;
+* Added some improvements to the map editor such as undo & redo and event duplication;
+* Fixed the medal unlocking issue on newgrounds (finally!);
+* Fixed issue: when the "maxLevel" and "startLevel" is set improperly, the map can't be open in the editor;
+
+v0.9.0
+* Added new collecting feature: Dwarf's Logs;
+* Added new script commands for the map editor: "setItemType", "setDarkness";
+* Fixed boss level in zone 4; disabled the using of Scroll of Earthquake in all boss levels;
+
